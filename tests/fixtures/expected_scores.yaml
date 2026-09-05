@@ -1,0 +1,60 @@
+# Expected scores for the classifier eval harness (tests/test_classifier_eval.py).
+#
+# THESE ARE MY PLACEHOLDER JUDGMENTS on SYNTHETIC fixtures, not the
+# technical owner's hand-corrected scores the brief asks for as the real
+# eval set. Replace both this file and tests/fixtures/ted_notices_raw/
+# with real TED notices and your own scores once this runs somewhere
+# with network access to TED — see README.md's 'Known limitation'.
+#
+# Axes: fit, timing, reachability, evidence_quality (each 0-5).
+
+01_hamburg_tos_migration:
+  evidence_quality: 5
+  fit: 5
+  reachability: 4
+  timing: 5
+02_austria_nis2_cyber_resilience:
+  evidence_quality: 4
+  fit: 4
+  reachability: 3
+  timing: 4
+03_vague_it_framework_agreement:
+  evidence_quality: 4
+  fit: 2
+  reachability: 3
+  timing: 1
+04_large_national_rail_freight:
+  evidence_quality: 5
+  fit: 4
+  reachability: 2
+  timing: 4
+05_austria_customs_software:
+  evidence_quality: 5
+  fit: 5
+  reachability: 4
+  timing: 5
+06_switzerland_freight_forwarder:
+  evidence_quality: 4
+  fit: 4
+  reachability: 4
+  timing: 4
+07_misclassified_catering_services:
+  evidence_quality: 4
+  fit: 0
+  reachability: 3
+  timing: 2
+08_yard_automation_equipment_control:
+  evidence_quality: 5
+  fit: 5
+  reachability: 4
+  timing: 4
+09_digitalization_strategy_consulting:
+  evidence_quality: 3
+  fit: 2
+  reachability: 3
+  timing: 0
+10_port_community_system_integration:
+  evidence_quality: 5
+  fit: 5
+  reachability: 4
+  timing: 4

@@ -1,0 +1,22 @@
+{
+  "_fixture_note": "SYNTHETIC \u2014 modeled on the documented TED Search API v3 schema, not a real TED notice. This sandbox had no network access to TED; replace with 10 real notices (and expected_scores.yaml with your own hand-corrected scores) before treating this as a meaningful eval set. See README.md's 'Known limitation' section.",
+  "publication-number": "100009-2026",
+  "notice-title": {
+    "eng": "Digitalization strategy consulting services"
+  },
+  "buyer-name": {
+    "eng": "Chamber of Commerce Lower Saxony"
+  },
+  "buyer-country": "DEU",
+  "classification-cpv": [
+    "72000000"
+  ],
+  "publication-date": "2026-05-15",
+  "deadline-receipt-request": "2027-03-01",
+  "links": {
+    "html": {
+      "eng": "https://ted.europa.eu/en/notice/-/detail/100009-2026"
+    }
+  },
+  "contact-point": null
+}

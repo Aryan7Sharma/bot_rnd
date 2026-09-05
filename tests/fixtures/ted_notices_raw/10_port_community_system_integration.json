@@ -1,0 +1,23 @@
+{
+  "_fixture_note": "SYNTHETIC \u2014 modeled on the documented TED Search API v3 schema, not a real TED notice. This sandbox had no network access to TED; replace with 10 real notices (and expected_scores.yaml with your own hand-corrected scores) before treating this as a meaningful eval set. See README.md's 'Known limitation' section.",
+  "publication-number": "100010-2026",
+  "notice-title": {
+    "eng": "Port community system integration and eFTI-compliant data exchange platform"
+  },
+  "buyer-name": {
+    "eng": "Lubeck Port Authority"
+  },
+  "buyer-country": "DEU",
+  "classification-cpv": [
+    "48610000",
+    "72212000"
+  ],
+  "publication-date": "2026-08-25",
+  "deadline-receipt-request": "2026-10-10",
+  "links": {
+    "html": {
+      "eng": "https://ted.europa.eu/en/notice/-/detail/100010-2026"
+    }
+  },
+  "contact-point": null
+}

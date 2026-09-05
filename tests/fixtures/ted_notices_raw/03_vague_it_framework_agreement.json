@@ -1,0 +1,22 @@
+{
+  "_fixture_note": "SYNTHETIC \u2014 modeled on the documented TED Search API v3 schema, not a real TED notice. This sandbox had no network access to TED; replace with 10 real notices (and expected_scores.yaml with your own hand-corrected scores) before treating this as a meaningful eval set. See README.md's 'Known limitation' section.",
+  "publication-number": "100003-2026",
+  "notice-title": {
+    "eng": "Framework agreement for general IT consulting services"
+  },
+  "buyer-name": {
+    "eng": "Regional Administration Office Bavaria"
+  },
+  "buyer-country": "DEU",
+  "classification-cpv": [
+    "72000000"
+  ],
+  "publication-date": "2026-06-01",
+  "deadline-receipt-request": null,
+  "links": {
+    "html": {
+      "eng": "https://ted.europa.eu/en/notice/-/detail/100003-2026"
+    }
+  },
+  "contact-point": null
+}

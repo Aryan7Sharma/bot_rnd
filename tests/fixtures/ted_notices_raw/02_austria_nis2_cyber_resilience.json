@@ -1,0 +1,23 @@
+{
+  "_fixture_note": "SYNTHETIC \u2014 modeled on the documented TED Search API v3 schema, not a real TED notice. This sandbox had no network access to TED; replace with 10 real notices (and expected_scores.yaml with your own hand-corrected scores) before treating this as a meaningful eval set. See README.md's 'Known limitation' section.",
+  "publication-number": "100002-2026",
+  "notice-title": {
+    "eng": "Cyber resilience and NIS2 compliance program for logistics IT infrastructure"
+  },
+  "buyer-name": {
+    "eng": "Austrian Federal Railways Logistics Division"
+  },
+  "buyer-country": "AUT",
+  "classification-cpv": [
+    "79417000",
+    "72000000"
+  ],
+  "publication-date": "2026-07-20",
+  "deadline-receipt-request": "2026-09-30",
+  "links": {
+    "html": {
+      "eng": "https://ted.europa.eu/en/notice/-/detail/100002-2026"
+    }
+  },
+  "contact-point": null
+}

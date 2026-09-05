@@ -1,0 +1,32 @@
+{
+  "_fixture_note": "SYNTHETIC \u2014 modeled on the documented TED Search API v3 schema, not a real TED notice. This sandbox had no network access to TED; replace with 10 real notices (and expected_scores.yaml with your own hand-corrected scores) before treating this as a meaningful eval set. See README.md's 'Known limitation' section.",
+  "publication-number": "100001-2026",
+  "notice-title": {
+    "eng": "Migration of container terminal operating system (TOS)"
+  },
+  "buyer-name": {
+    "eng": "Hamburg Port Authority"
+  },
+  "buyer-country": "DEU",
+  "classification-cpv": [
+    "72000000",
+    "63100000"
+  ],
+  "publication-date": "2026-08-01",
+  "deadline-receipt-request": "2026-10-15",
+  "links": {
+    "html": {
+      "eng": "https://ted.europa.eu/en/notice/-/detail/100001-2026"
+    }
+  },
+  "contact-point": {
+    "name": {
+      "eng": "Petra Muller"
+    },
+    "role": {
+      "eng": "Procurement Lead"
+    },
+    "email": "p.muller@hamburg-port.example",
+    "phone": "+49 40 5550101"
+  }
+}
