@@ -1,0 +1,39 @@
+[project]
+name = "kriyon-bd-agent"
+version = "0.1.0"
+description = "Signal-detection agent for Kriyon Technologies business development (Phase 1: TED ingestion)"
+requires-python = ">=3.11"
+dependencies = [
+    "httpx>=0.27",
+    "psycopg[binary]>=3.1",
+    "pgvector>=0.3.6",
+    "anthropic>=0.40",
+    "tomli>=2.0; python_version < '3.11'",
+    "python-dotenv>=1.0",
+    "structlog>=24.1",
+    "pydantic>=2.7",
+    "pyyaml>=6.0",
+    "click>=8.1",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "pytest-mock>=3.14",
+]
+
+[project.scripts]
+kriyon-bd = "kriyon_bd.cli:cli"
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+    "slow: calls a real external API (Anthropic or TED); excluded from default test runs",
+]
