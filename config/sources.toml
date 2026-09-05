@@ -1,0 +1,43 @@
+# TED ingestion scope for Phase 1. Non-secret; secrets (API keys) stay in env vars.
+
+[ted]
+# Actual base URL comes from the TED_API_BASE_URL env var (see .env.example);
+# this file only holds query scope, not endpoints or credentials.
+countries = ["DEU", "AUT", "CHE"]  # ISO-3 codes: Germany, Austria, Switzerland (DACH)
+# NOTE: Swiss contracting authorities mostly publish on simap.ch, not TED.
+# CH participates in the WTO Government Procurement Agreement so some
+# above-threshold Swiss tenders do appear in TED, but volume may be low.
+# Unverified from this sandbox (no network access to confirm) — check
+# actual result counts once this runs against the live API, and consider
+# a dedicated simap.ch connector in Phase 2/3 if TED coverage of CH is thin.
+
+scope = "ACTIVE"        # "ACTIVE" = currently open notices; use "ALL" for backfill/history
+page_size = 100          # API max is 250 per TED docs; keep well under to avoid throttling
+lookback_days = 30       # first-run/backfill window; incremental runs track a watermark instead
+sort = "publication-date DESC"
+
+# CPV codes OR'd together in the expert query. Generated from, and must be
+# kept in sync with, config/cpv_codes.toml (the source of truth with
+# capability tagging and verification status).
+cpv_codes = [
+  "48000000", "48610000", "72000000", "72212000", "72222300",
+  "63000000", "63100000", "63120000", "32441000", "79417000", "72500000",
+]
+
+# eForms `main-activity` code-list values used to cross-reference CPV hits
+# against transport/port/logistics activity, per the brief. NOT verified
+# against the official TED eForms code list from this sandbox (network
+# blocked) — confirm exact values before relying on this filter narrowing
+# results rather than widening false negatives.
+main_activities = ["ports", "railway", "urban-transport", "general-public-services"]
+main_activities_verified = false
+
+# Full-text terms OR'd in alongside the CPV filter, to catch tenders that
+# undersell themselves on CPV classification (a common problem — buyers
+# often pick a generic "IT services" CPV code for a specific TOS or customs
+# system project).
+keywords = [
+  "terminal operating system", "TOS", "port community system",
+  "customs software", "NIS2", "cyber resilience", "yard management system",
+  "freight visibility", "track and trace", "eFTI", "ICS2", "customs data hub",
+]

@@ -1,0 +1,32 @@
+# Versioned scoring rubric. Bump `version` on any substantive edit —
+# signal_scores.rubric_version records which version produced each score,
+# so rubric changes can be audited against outcomes (Phase 2 eval harness).
+#
+# Each axis is scored 0-5 by the classifier, which must also return a
+# one-sentence justification per axis (enforced in scoring/classifier.py,
+# not just requested in the prompt).
+
+version = "0.1.0"
+
+[surfacing]
+# Sum of the four 0-5 axis scores (max 20). Below this, the signal is
+# stored but not included in the digest.
+threshold = 12
+
+[axes.fit]
+description = "Does the underlying need map to customs and trade systems, terminal or yard technology, freight visibility, integration, or NIS2?"
+
+[axes.timing]
+description = "Is there a hard date? Tender deadlines and regulatory deadlines score highest; vague modernisation talk scores lowest."
+
+[axes.reachability]
+description = "Is this an organisation Kriyon could plausibly serve given size, and does the tender language or delivery location create a barrier? Factor in whether submission requires a language or national framework Kriyon can realistically meet."
+# Phase 1 target audience, per the technical owner: mid-size port/terminal
+# operators and mid-tier freight forwarders. Large national port
+# authorities and multinational buyers should score LOWER on this axis,
+# not be filtered out at ingestion — keeping them visible (just deprioritised)
+# lets the threshold and rubric get corrected by hand if this is too aggressive.
+size_guidance = "mid-size port/terminal operators, mid-tier freight forwarders preferred; large national/multinational buyers score lower, not excluded"
+
+[axes.evidence_quality]
+description = "Is this an official document, or a rumour in a trade blog? TED notices are official by construction, so in Phase 1 (TED-only) this axis should usually score high; it starts mattering once Phase 3 adds trade press and hiring signals."

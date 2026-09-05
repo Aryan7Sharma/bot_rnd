@@ -1,0 +1,78 @@
+# Curated CPV codes cross-referenced to Kriyon's five capability areas.
+# `verified = false` means I could not confirm the code/label pair against
+# the official CPV vocabulary from this sandbox (network access to EU
+# publication sites is blocked here). Check https://simap.ted.europa.eu/cpv
+# before trusting a `verified = false` entry for production filtering —
+# an unverified code either silently returns zero results (harmless) or
+# the wrong ones (not harmless), so confirm before relying on it.
+#
+# capability values: customs_trade_systems | terminal_yard_tech |
+#                     freight_visibility | integration | nis2_compliance
+
+version = "2026-09-05"
+
+[[codes]]
+code = "48000000"
+label = "Software package and information systems"
+capability = "integration"
+verified = true
+
+[[codes]]
+code = "48610000"
+label = "Database systems"
+capability = "integration"
+verified = true
+
+[[codes]]
+code = "72000000"
+label = "IT services: consulting, software development, Internet and support"
+capability = "integration"
+verified = true
+
+[[codes]]
+code = "72212000"
+label = "Software programming services"
+capability = "integration"
+verified = true
+
+[[codes]]
+code = "72222300"
+label = "Information technology services"
+capability = "integration"
+verified = false
+
+[[codes]]
+code = "72500000"
+label = "Computer-related services"
+capability = "customs_trade_systems"
+verified = false
+
+[[codes]]
+code = "63000000"
+label = "Supporting and auxiliary transport services; travel agencies services"
+capability = "freight_visibility"
+verified = true
+
+[[codes]]
+code = "63100000"
+label = "Cargo handling and storage services"
+capability = "terminal_yard_tech"
+verified = true
+
+[[codes]]
+code = "63120000"
+label = "Storage and warehousing services"
+capability = "terminal_yard_tech"
+verified = true
+
+[[codes]]
+code = "32441000"
+label = "Telemetry and control network system"
+capability = "terminal_yard_tech"
+verified = false
+
+[[codes]]
+code = "79417000"
+label = "Safety consultancy services"
+capability = "nis2_compliance"
+verified = false
